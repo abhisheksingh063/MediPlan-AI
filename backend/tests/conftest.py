@@ -50,10 +50,17 @@ def engine():
 
 @pytest.fixture()
 def session(engine):
-    """Provide a session whose writes are rolled back after each test."""
+    """Provide a session whose writes are rolled back after each test.
+
+    ``join_transaction_mode="create_savepoint"`` lets service-layer ``commit()``
+    calls released inside nested savepoints so the outer transaction can still
+    be rolled back at test teardown.
+    """
     connection = engine.connect()
     transaction = connection.begin()
-    test_session = sessionmaker(bind=connection)()
+    test_session = sessionmaker(
+        bind=connection, join_transaction_mode="create_savepoint"
+    )()
     try:
         yield test_session
     finally:
@@ -61,3 +68,20 @@ def session(engine):
         if transaction.is_active:
             transaction.rollback()
         connection.close()
+
+
+@pytest.fixture()
+def client(session):
+    """Provide a FastAPI TestClient whose requests share the test session."""
+    from fastapi.testclient import TestClient
+
+    from app.core.database import get_db
+    from app.main import app
+
+    def override_get_db():
+        yield session
+
+    app.dependency_overrides[get_db] = override_get_db
+    with TestClient(app) as test_client:
+        yield test_client
+    app.dependency_overrides.pop(get_db, None)
