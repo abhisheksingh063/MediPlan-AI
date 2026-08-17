@@ -4,7 +4,7 @@ MediPlan AI is an AI-assisted personalised treatment decision-support prototype 
 
 ## Current Phase
 
-**Phase 1 — Finalise Project Scope.** This repository currently contains planning documentation only; application components have not yet been implemented.
+**Phase 2 — Research & Requirements.** This repository contains planning and research documentation only; application components have not yet been implemented.
 
 ## MVP Scope
 
@@ -20,4 +20,4 @@ MediPlan AI is a decision-support prototype, not a diagnostic, prescribing, or m
 
 ## Development Roadmap
 
-Next: Phase 2 — Research & Requirements. The complete Phase 1 development contract and future-phase roadmap are in [docs/project-scope.md](docs/project-scope.md).
+Next: Phase 3 — Product & UX Design. The Phase 1 scope is in [docs/project-scope.md](docs/project-scope.md); Phase 2 research and requirements are in [docs/research.md](docs/research.md) and [docs/requirements.md](docs/requirements.md).
