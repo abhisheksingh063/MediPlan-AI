@@ -4,7 +4,7 @@ MediPlan AI is an AI-assisted personalised treatment decision-support prototype 
 
 ## Current Phase
 
-**Phase 2 — Research & Requirements.** This repository contains planning and research documentation only; application components have not yet been implemented.
+**Phase 4 — Architecture & Repository Setup.** The repository now has a React/Vite foundation, FastAPI application skeleton, PostgreSQL development Compose configuration, and architecture documentation. Product features have not yet been implemented.
 
 ## MVP Scope
 
@@ -14,10 +14,31 @@ The MVP supports synthetic/test patients only and is designed for clinician revi
 
 React + Vite, Python + FastAPI, PostgreSQL, scikit-learn, Random Forest and/or XGBoost, SHAP and/or feature importance, pandas, NumPy, and Recharts or Chart.js. Docker Compose is recommended for reproducibility.
 
+## Project Structure
+
+```text
+backend/        FastAPI application foundation
+frontend/       React + Vite application foundation
+data/           Future raw, processed, medicine, and facility reference data
+models/         Future reviewed model artifacts
+scripts/        Future reproducible scripts
+infrastructure/ Future infrastructure configuration
+docs/           Scope, research, requirements, UX, and architecture records
+```
+
+## Local Development Foundation
+
+1. Copy `.env.example` to `.env` and set a local PostgreSQL password.
+2. Start PostgreSQL: `docker compose up -d postgres`.
+3. Install and run the backend: `python -m pip install -r backend/requirements.txt`, then `python -m uvicorn app.main:app --app-dir backend --reload`.
+4. Install and run the frontend: `cd frontend`, `npm install`, then `npm run dev`.
+
+The only current backend route is `GET /health`, a local liveness check. Application functionality is intentionally deferred to later phases. See [docs/architecture.md](docs/architecture.md) for boundaries and conventions.
+
 ## Safety Disclaimer
 
 MediPlan AI is a decision-support prototype, not a diagnostic, prescribing, or medication-ordering system. It does not replace a clinician. AI-supported output requires clinician review, demonstrations use synthetic/test data, and ABDM/ABHA is optional rather than an MVP dependency.
 
 ## Development Roadmap
 
-Next: Phase 3 — Product & UX Design. The Phase 1 scope is in [docs/project-scope.md](docs/project-scope.md); Phase 2 research and requirements are in [docs/research.md](docs/research.md) and [docs/requirements.md](docs/requirements.md).
+Next: Phase 5 — Database & Data Model. The Phase 1 scope is in [docs/project-scope.md](docs/project-scope.md); Phase 2 research and requirements are in [docs/research.md](docs/research.md) and [docs/requirements.md](docs/requirements.md); Phase 3 UX design is in [docs/ux-design.md](docs/ux-design.md); architecture is in [docs/architecture.md](docs/architecture.md).
