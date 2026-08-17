@@ -4,7 +4,7 @@ MediPlan AI is an AI-assisted personalised treatment decision-support prototype 
 
 ## Current Phase
 
-**Phase 4 — Architecture & Repository Setup.** The repository now has a React/Vite foundation, FastAPI application skeleton, PostgreSQL development Compose configuration, and architecture documentation. Product features have not yet been implemented.
+**Phase 5 — Database & Data Model.** PostgreSQL persistence foundation: SQLAlchemy models for patients, clinical records, lab results, medicines/prices, facilities/services, predictions, referrals, and audit logs; Alembic initial migration; and demo seed infrastructure. Application features have not yet been implemented. See [docs/database.md](docs/database.md).
 
 ## MVP Scope
 
@@ -30,8 +30,10 @@ docs/           Scope, research, requirements, UX, and architecture records
 
 1. Copy `.env.example` to `.env` and set a local PostgreSQL password.
 2. Start PostgreSQL: `docker compose up -d postgres`.
-3. Install and run the backend: `python -m pip install -r backend/requirements.txt`, then `python -m uvicorn app.main:app --app-dir backend --reload`.
-4. Install and run the frontend: `cd frontend`, `npm install`, then `npm run dev`.
+3. Create the schema: `cd backend`, `python -m alembic upgrade head`.
+4. (Optional) Seed demo data: `python scripts/seed.py --demo` from the repository root.
+5. Install and run the backend: `python -m pip install -r backend/requirements.txt`, then `python -m uvicorn app.main:app --app-dir backend --reload`.
+6. Install and run the frontend: `cd frontend`, `npm install`, then `npm run dev`.
 
 The only current backend route is `GET /health`, a local liveness check. Application functionality is intentionally deferred to later phases. See [docs/architecture.md](docs/architecture.md) for boundaries and conventions.
 
@@ -41,4 +43,4 @@ MediPlan AI is a decision-support prototype, not a diagnostic, prescribing, or m
 
 ## Development Roadmap
 
-Next: Phase 5 — Database & Data Model. The Phase 1 scope is in [docs/project-scope.md](docs/project-scope.md); Phase 2 research and requirements are in [docs/research.md](docs/research.md) and [docs/requirements.md](docs/requirements.md); Phase 3 UX design is in [docs/ux-design.md](docs/ux-design.md); architecture is in [docs/architecture.md](docs/architecture.md).
+Next: Phase 6 — Patient Management. The Phase 1 scope is in [docs/project-scope.md](docs/project-scope.md); Phase 2 research and requirements are in [docs/research.md](docs/research.md) and [docs/requirements.md](docs/requirements.md); Phase 3 UX design is in [docs/ux-design.md](docs/ux-design.md); architecture is in [docs/architecture.md](docs/architecture.md); the database model is in [docs/database.md](docs/database.md).
