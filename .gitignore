@@ -44,3 +44,9 @@ Thumbs.db
 .ipynb_checkpoints/
 mlruns/
 wandb/
+
+# Acquired/generated dataset artifacts (reproducible via scripts/prepare_dataset.py)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
