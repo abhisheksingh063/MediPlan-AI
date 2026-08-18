@@ -102,14 +102,18 @@ def _build_raw_frame(features: dict) -> pd.DataFrame:
     return frame
 
 
-def predict_probability(features: dict) -> float:
-    """Return the calibrated probability of early readmission in [0, 1]."""
+def predict_parts(features: dict) -> dict:
+    """Run the full pipeline and return all intermediate values.
+
+    Exposes the encoded features, feature names, raw log-odds, raw probability
+    and calibrated probability so explanation layers can reuse the exact same
+    preprocessing/model/calibration path as :func:`predict` (single source of
+    truth, no duplicated loading or transformation logic).
+    """
     preprocessor = _load_safely(
         _load_preprocessor, "Model preprocessing artifacts are temporarily unavailable."
     )
-    model = _load_safely(
-        _load_model, "Model artifacts are temporarily unavailable."
-    )
+    model = _load_safely(_load_model, "Model artifacts are temporarily unavailable.")
     calibrator = _load_safely(
         _load_calibrator, "Calibration artifacts are temporarily unavailable."
     )
@@ -118,8 +122,10 @@ def predict_probability(features: dict) -> float:
     )
 
     frame = _build_raw_frame(features)
-    encoded = preprocessing.apply_preprocessor(preprocessor, frame).to_numpy("float64")
-    raw = compare.baseline.predict_probabilities(model, encoded)[0]
+    encoded = preprocessing.apply_preprocessor(preprocessor, frame)
+    encoded_array = encoded.to_numpy("float64")
+    logit = float(model.decision_function(encoded_array)[0])
+    raw = float(compare.baseline.predict_probabilities(model, encoded_array)[0])
 
     method = config["calibration"]["method"]
     if method == "none":
@@ -129,15 +135,27 @@ def predict_probability(features: dict) -> float:
             np.asarray([raw]), calibrator, method
         )
         probability = float(calibrated[0])
-    return probability
+    return {
+        "encoded": encoded,
+        "encoded_array": encoded_array,
+        "encoded_feature_names": list(encoded.columns),
+        "logit": logit,
+        "raw_probability": raw,
+        "probability": probability,
+        "config": config,
+    }
+
+
+def predict_probability(features: dict) -> float:
+    """Return the calibrated probability of early readmission in [0, 1]."""
+    return predict_parts(features)["probability"]
 
 
 def predict(features: dict) -> dict:
     """Run inference on a validated feature dict and return the API payload."""
-    config = _load_safely(
-        _load_validation_config, "Validation configuration is temporarily unavailable."
-    )
-    probability = predict_probability(features)
+    parts = predict_parts(features)
+    config = parts["config"]
+    probability = parts["probability"]
     threshold = float(config["threshold"]["selected"])
     model_version = str(compare.load_selected_metadata()["model"]["version"])
     return {

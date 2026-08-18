@@ -1,0 +1,109 @@
+{
+  "artifact": {
+    "created": "2026-08-18",
+    "description": "Global SHAP feature importance for the selected Logistic Regression, aggregated from transformed features back to the original clinical inputs. Aggregates only; no patient data.",
+    "version": "explainability-global-v1"
+  },
+  "dataset": {
+    "dataset_version": "phase7-preprocessing-v1.0.0",
+    "name": "Diabetes 130-US Hospitals for Years 1999-2008",
+    "validation_rows": 15027
+  },
+  "explainer": {
+    "background": "first 100 rows of the validation partition (mean log-odds -0.239405)",
+    "name": "LinearExplainer (interventional, exact for linear models)",
+    "output_space": "log-odds (decision function of the selected model)"
+  },
+  "features": [
+    {
+      "feature": "number_inpatient",
+      "mean_abs_shap": 0.19062042061513287,
+      "mean_shap": 0.10900370020428288
+    },
+    {
+      "feature": "number_diagnoses",
+      "mean_abs_shap": 0.08870735385497128,
+      "mean_shap": 0.03192621844788958
+    },
+    {
+      "feature": "age",
+      "mean_abs_shap": 0.07829330034879198,
+      "mean_shap": 0.02018480435558993
+    },
+    {
+      "feature": "diabetesMed",
+      "mean_abs_shap": 0.07311473821542558,
+      "mean_shap": -0.004881946639112598
+    },
+    {
+      "feature": "time_in_hospital",
+      "mean_abs_shap": 0.06595738639054041,
+      "mean_shap": -0.014180916930079591
+    },
+    {
+      "feature": "admission_source_id",
+      "mean_abs_shap": 0.04700091969121129,
+      "mean_shap": 0.009485714558844305
+    },
+    {
+      "feature": "admission_type_id",
+      "mean_abs_shap": 0.034291715806945955,
+      "mean_shap": -0.0319226956993469
+    },
+    {
+      "feature": "num_procedures",
+      "mean_abs_shap": 0.033641628824221205,
+      "mean_shap": 0.006273070129518011
+    },
+    {
+      "feature": "num_medications",
+      "mean_abs_shap": 0.026681254703762095,
+      "mean_shap": 0.004553749683073851
+    },
+    {
+      "feature": "A1Cresult",
+      "mean_abs_shap": 0.01924060133897506,
+      "mean_shap": -0.004192109017871
+    },
+    {
+      "feature": "max_glu_serum",
+      "mean_abs_shap": 0.017466354799672377,
+      "mean_shap": 0.008497377854810764
+    },
+    {
+      "feature": "number_emergency",
+      "mean_abs_shap": 0.014160308397674296,
+      "mean_shap": 0.011536557468706196
+    },
+    {
+      "feature": "num_lab_procedures",
+      "mean_abs_shap": 0.00920804525554063,
+      "mean_shap": -0.0040292340262987475
+    },
+    {
+      "feature": "gender",
+      "mean_abs_shap": 0.008158053338938244,
+      "mean_shap": -0.0017607518761573256
+    },
+    {
+      "feature": "race",
+      "mean_abs_shap": 0.007018496235468606,
+      "mean_shap": -0.002291268029187113
+    },
+    {
+      "feature": "change",
+      "mean_abs_shap": 0.005109665787242523,
+      "mean_shap": -0.0010758419147593856
+    },
+    {
+      "feature": "number_outpatient",
+      "mean_abs_shap": 0.0002735753714927787,
+      "mean_shap": -0.00026079242730984374
+    }
+  ],
+  "model": {
+    "name": "Logistic Regression (selected)",
+    "version": "selected-model-v1"
+  },
+  "note": "mean_abs_shap is the mean absolute SHAP contribution per original feature; mean_shap is the mean signed contribution. Values are in log-odds units of the underlying model. SHAP explains model behaviour; it does not establish clinical causation, and the displayed probability is calibrated after the model output."
+}

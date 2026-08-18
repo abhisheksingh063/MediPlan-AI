@@ -40,6 +40,11 @@ VALIDATION_CONFIG_FILE = MODELS_DIR / "model_validation_v1.json"
 VALIDATION_CONFIG_VERSION = "validation-config-v1"
 SELECTED_CALIBRATOR_FILE = MODELS_DIR / "selected_model_calibrator_v1.joblib"
 
+# Phase 12 explainability artifacts (versioned; aggregates only, never
+# individual patient records).
+EXPLAINABILITY_GLOBAL_FILE = MODELS_DIR / "explainability_global_v1.json"
+EXPLAINABILITY_GLOBAL_VERSION = "explainability-global-v1"
+
 # UCI download source (verified page terms, CC BY 4.0).
 DATASET_NAME = "Diabetes 130-US Hospitals for Years 1999-2008"
 DATASET_PUBLISHER = "UCI Machine Learning Repository"
