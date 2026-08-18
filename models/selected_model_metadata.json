@@ -1,0 +1,227 @@
+{
+  "dataset": {
+    "dataset_version": "phase7-preprocessing-v1.0.0",
+    "feature_count": 55,
+    "feature_order": [
+      "time_in_hospital",
+      "num_lab_procedures",
+      "num_procedures",
+      "num_medications",
+      "number_outpatient",
+      "number_emergency",
+      "number_inpatient",
+      "number_diagnoses",
+      "race_AfricanAmerican",
+      "race_Asian",
+      "race_Caucasian",
+      "race_Hispanic",
+      "race_Other",
+      "race_Unknown",
+      "gender_Female",
+      "gender_Male",
+      "gender_Unknown/Invalid",
+      "admission_type_id_1",
+      "admission_type_id_2",
+      "admission_type_id_3",
+      "admission_type_id_4",
+      "admission_type_id_5",
+      "admission_type_id_6",
+      "admission_type_id_7",
+      "admission_type_id_8",
+      "admission_source_id_1",
+      "admission_source_id_10",
+      "admission_source_id_11",
+      "admission_source_id_13",
+      "admission_source_id_14",
+      "admission_source_id_17",
+      "admission_source_id_2",
+      "admission_source_id_20",
+      "admission_source_id_22",
+      "admission_source_id_25",
+      "admission_source_id_3",
+      "admission_source_id_4",
+      "admission_source_id_5",
+      "admission_source_id_6",
+      "admission_source_id_7",
+      "admission_source_id_8",
+      "admission_source_id_9",
+      "max_glu_serum_>200",
+      "max_glu_serum_>300",
+      "max_glu_serum_None",
+      "max_glu_serum_Norm",
+      "A1Cresult_>7",
+      "A1Cresult_>8",
+      "A1Cresult_None",
+      "A1Cresult_Norm",
+      "diabetesMed_No",
+      "diabetesMed_Yes",
+      "change_Ch",
+      "change_No",
+      "age"
+    ],
+    "name": "Diabetes 130-US Hospitals for Years 1999-2008",
+    "preprocessing_version": "1.0.0",
+    "random_seed": 42,
+    "source_url": "https://archive.ics.uci.edu/dataset/296/diabetes-130-us-hospitals-for-years-1999-2008",
+    "split_row_counts": {
+      "test": 15219,
+      "train": 71520,
+      "validation": 15027
+    }
+  },
+  "limitations": [
+    "Research/prototype risk estimate only; not a diagnosis, prescription or treatment decision, and it does not replace a clinician.",
+    "Cohort is diabetes-coded US hospital encounters (1999-2008), not a clinically validated Type 2-only cohort (Phase 7 gate remains open).",
+    "No prospective validation; retrospective dataset; possible dataset bias and generalisation limits to newer/non-US populations.",
+    "Imbalanced positive class (~11%); threshold-dependent metrics use a 0.5 decision boundary that is not clinically optimised."
+  ],
+  "metrics": {
+    "test": {
+      "accuracy": 0.674223,
+      "average_precision": 0.198731,
+      "confusion_matrix": {
+        "false_negative": 861,
+        "false_positive": 4097,
+        "true_negative": 9442,
+        "true_positive": 819
+      },
+      "f1": 0.248332,
+      "positive_prevalence": 0.110388,
+      "precision": 0.166599,
+      "recall": 0.4875,
+      "roc_auc": 0.635038,
+      "threshold": 0.5
+    },
+    "train": {
+      "accuracy": 0.672162,
+      "average_precision": 0.193925,
+      "confusion_matrix": {
+        "false_negative": 4085,
+        "false_positive": 19362,
+        "true_negative": 44137,
+        "true_positive": 3936
+      },
+      "f1": 0.251349,
+      "positive_prevalence": 0.11215,
+      "precision": 0.168942,
+      "recall": 0.490712,
+      "roc_auc": 0.637795,
+      "threshold": 0.5
+    },
+    "validation": {
+      "accuracy": 0.674586,
+      "average_precision": 0.179443,
+      "confusion_matrix": {
+        "false_negative": 901,
+        "false_positive": 3989,
+        "true_negative": 9382,
+        "true_positive": 755
+      },
+      "f1": 0.235937,
+      "positive_prevalence": 0.110202,
+      "precision": 0.159148,
+      "recall": 0.455918,
+      "roc_auc": 0.619348,
+      "threshold": 0.5
+    }
+  },
+  "model": {
+    "family": "logistic_regression",
+    "name": "Logistic Regression (baseline)",
+    "prediction_threshold": 0.5,
+    "target": "early_readmission",
+    "task": "Estimate probability of early (<30-day) readmission for a diabetes-coded encounter.",
+    "threshold_note": "Threshold is the default 0.5 decision boundary for reporting threshold-dependent metrics; it is not claimed to be clinically optimal.",
+    "version": "selected-model-v1"
+  },
+  "selection": {
+    "candidates_tested": [
+      "logistic_regression",
+      "random_forest_default",
+      "random_forest_regularized",
+      "gradient_boosting_default",
+      "gradient_boosting_regularized"
+    ],
+    "criterion": "Highest validation PR-AUC, then validation ROC-AUC, then F1, then smaller train-vs-validation ROC-AUC gap; validation only, never test.",
+    "ranking": [
+      {
+        "candidate": "logistic_regression",
+        "display_name": "Logistic Regression (baseline)",
+        "family": "logistic_regression",
+        "generalization_gap_roc_auc": 0.018447,
+        "train_average_precision": 0.193925,
+        "train_roc_auc": 0.637795,
+        "validation_average_precision": 0.179443,
+        "validation_f1": 0.235937,
+        "validation_precision": 0.159148,
+        "validation_recall": 0.455918,
+        "validation_roc_auc": 0.619348
+      },
+      {
+        "candidate": "random_forest_regularized",
+        "display_name": "Random Forest",
+        "family": "random_forest",
+        "generalization_gap_roc_auc": 0.138552,
+        "train_average_precision": 0.305388,
+        "train_roc_auc": 0.762926,
+        "validation_average_precision": 0.172922,
+        "validation_f1": 0.243284,
+        "validation_precision": 0.162786,
+        "validation_recall": 0.48128,
+        "validation_roc_auc": 0.624374
+      },
+      {
+        "candidate": "gradient_boosting_regularized",
+        "display_name": "Gradient Boosting (HistGradientBoosting)",
+        "family": "gradient_boosting",
+        "generalization_gap_roc_auc": 0.204068,
+        "train_average_precision": 0.379738,
+        "train_roc_auc": 0.817318,
+        "validation_average_precision": 0.171966,
+        "validation_f1": 0.235039,
+        "validation_precision": 0.157971,
+        "validation_recall": 0.458937,
+        "validation_roc_auc": 0.61325
+      },
+      {
+        "candidate": "gradient_boosting_default",
+        "display_name": "Gradient Boosting (HistGradientBoosting)",
+        "family": "gradient_boosting",
+        "generalization_gap_roc_auc": 0.216234,
+        "train_average_precision": 0.401194,
+        "train_roc_auc": 0.826387,
+        "validation_average_precision": 0.167833,
+        "validation_f1": 0.234553,
+        "validation_precision": 0.15732,
+        "validation_recall": 0.460749,
+        "validation_roc_auc": 0.610153
+      },
+      {
+        "candidate": "random_forest_default",
+        "display_name": "Random Forest",
+        "family": "random_forest",
+        "generalization_gap_roc_auc": 0.409913,
+        "train_average_precision": 0.999999,
+        "train_roc_auc": 1.0,
+        "validation_average_precision": 0.148887,
+        "validation_f1": 0.067404,
+        "validation_precision": 0.201807,
+        "validation_recall": 0.040459,
+        "validation_roc_auc": 0.590087
+      }
+    ],
+    "rationale": "Selected Logistic Regression (baseline) (logistic_regression) on the validation partition. Criterion: highest validation PR-AUC (0.179443), then ROC-AUC (0.619348), then F1 (0.235937), with a smaller train-vs-validation ROC-AUC gap (+0.018447) as tie-break. Baseline Logistic Regression validation PR-AUC was 0.179443; selected-model improvement +0.0000.",
+    "selected": "logistic_regression"
+  },
+  "training": {
+    "date": "2026-08-18",
+    "fit_time_no_leakage": "Model fit exclusively on the training partition produced by Phase 7; validation/test used only for evaluation.",
+    "hyperparameters": {
+      "C": 1.0,
+      "class_weight": "balanced",
+      "max_iter": 1000,
+      "random_state": 42,
+      "solver": "lbfgs"
+    }
+  }
+}

@@ -30,6 +30,11 @@ MODEL_FILE = MODELS_DIR / "logistic_regression_baseline_v1.joblib"
 MODEL_METADATA_FILE = MODELS_DIR / "baseline_model_metadata.json"
 MODEL_VERSION = "baseline-logistic-v1"
 
+# Phase 9 model artifacts (versioned; never patient data).
+SELECTED_MODEL_FILE = MODELS_DIR / "selected_model_v1.joblib"
+SELECTED_MODEL_METADATA_FILE = MODELS_DIR / "selected_model_metadata.json"
+SELECTED_MODEL_VERSION = "selected-model-v1"
+
 # UCI download source (verified page terms, CC BY 4.0).
 DATASET_NAME = "Diabetes 130-US Hospitals for Years 1999-2008"
 DATASET_PUBLISHER = "UCI Machine Learning Repository"
