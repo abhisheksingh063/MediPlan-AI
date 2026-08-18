@@ -7,6 +7,7 @@ from app.api.facilities import router as facilities_router
 from app.api.medicines import router as medicines_router
 from app.api.ml import router as ml_router
 from app.api.patients import router as patients_router
+from app.api.referrals import router as referrals_router
 from app.api.treatment_support import router as treatment_support_router
 from app.core.config import settings
 
@@ -36,3 +37,4 @@ app.include_router(facilities_router, prefix="/api/v1")
 app.include_router(ml_router, prefix="/api/v1")
 app.include_router(treatment_support_router, prefix="/api/v1")
 app.include_router(medicines_router, prefix="/api/v1")
+app.include_router(referrals_router, prefix="/api/v1")

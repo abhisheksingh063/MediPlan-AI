@@ -1,0 +1,636 @@
+{
+  "schema_version": "1.0",
+  "as_of_date": "2026-08-18",
+  "geographic_scope": "India",
+  "staleness_rule_days": 90,
+  "staleness_rule_source": "Phase 15 fixed numeric rule: any facility status/capability whose source_date is older than 90 days before the dataset as_of_date is flagged stale and shown visibly, never silently treated as current. Facility status/availability data goes stale faster than medicine pricing, hence 90 days (vs 180 days in Phase 14).",
+  "safety_message": "Facility information is reference data only; it does not guarantee real-time availability and does not constitute a referral or a clinical decision.",
+  "referral_safety_message": "Referral support only — clinician review required.",
+  "contact_caution_message": "Contact information may be outdated — verify independently before relying on it, and do not use for emergencies.",
+  "scope_note": "Facility scope is India and is independent of the origin of the clinical dataset (UCI Diabetes 130-US Hospitals) used for the ML model; this system does not claim facility capability information applies to the US hospital population.",
+  "ordering_note": "Facilities are listed alphabetically by name (neutral order) unless an explicit sort is requested.",
+  "facilities": [
+    {
+      "facility_id": "FAC-001",
+      "name": "All India Institute of Medical Sciences (AIIMS), New Delhi",
+      "facility_type": "medical_college",
+      "address": "Ansari Nagar, New Delhi",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "country": "India",
+      "postal_code": "110029",
+      "coordinates": {
+        "latitude": 28.56686,
+        "longitude": 77.20781,
+        "source": "OpenStreetMap (Nominatim geocoding, ODbL)",
+        "source_reference": "https://nominatim.openstreetmap.org (query: AIIMS New Delhi)",
+        "retrieved_at": "2026-08-18"
+      },
+      "contact": {
+        "phone": "+91-11-26588500",
+        "email": null,
+        "source": "AIIMS New Delhi official website (aiims.edu) - Emergency Telephone Numbers page",
+        "source_reference": "https://www.aiims.edu/index.php/en/hostel_accomodation_contact/emergency-telephone-nos-07-mat-2018",
+        "source_date": "2024-01-12",
+        "retrieved_at": "2026-08-18",
+        "note": "Board number as listed on the official website."
+      },
+      "status": "available",
+      "status_source": "Delhi Government - DGHS Emergency Medical Care guidelines (dgehs.delhi.gov.in)",
+      "status_source_reference": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+      "status_source_date": "2026-08-13",
+      "capabilities": [
+        {
+          "service": "emergency_care",
+          "status": "available",
+          "source": "AIIMS New Delhi official website - Citizen Charter: Casualty and Emergency Services",
+          "source_url": "https://www.aiims.edu/index.php/en/citizen-charter?id=231",
+          "source_date": "2024-01-12",
+          "retrieved_at": "2026-08-18",
+          "notes": "Casualty and emergency services available 24 hours, round the clock."
+        },
+        {
+          "service": "icu",
+          "status": "available",
+          "source": "Delhi Government - DGHS Emergency Medical Care guidelines",
+          "source_url": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+          "source_date": "2026-08-13",
+          "retrieved_at": "2026-08-18",
+          "notes": "Listed among major hospitals with CT scan and intensive care (ICU) facilities with ventilator support."
+        },
+        {
+          "service": "ct_scan",
+          "status": "available",
+          "source": "Delhi Government - DGHS Emergency Medical Care guidelines",
+          "source_url": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+          "source_date": "2026-08-13",
+          "retrieved_at": "2026-08-18",
+          "notes": "Listed among major hospitals with CT scan facilities."
+        },
+        {
+          "service": "iccu",
+          "status": "available",
+          "source": "Delhi Government - DGHS Emergency Medical Care guidelines",
+          "source_url": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+          "source_date": "2026-08-13",
+          "retrieved_at": "2026-08-18",
+          "notes": "Listed among hospitals with Intensive Cardiac Care (ICCU) facilities."
+        }
+      ],
+      "source": "AIIMS New Delhi official website (aiims.edu); Delhi Government DGHS Emergency Medical Care page",
+      "source_reference": "https://www.aiims.edu/index.php/en/citizen-charter?id=231 ; https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+      "source_date": "2024-01-12",
+      "retrieved_at": "2026-08-18",
+      "geographic_scope": "India",
+      "data_status": "confirmed",
+      "notes": "Central government apex hospital."
+    },
+    {
+      "facility_id": "FAC-002",
+      "name": "Deen Dayal Upadhyay Hospital (DDUH)",
+      "facility_type": "district_hospital",
+      "address": "Hari Nagar, New Delhi",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "country": "India",
+      "postal_code": "110064",
+      "coordinates": {
+        "latitude": 28.62816,
+        "longitude": 77.11110,
+        "source": "OpenStreetMap (Nominatim geocoding, ODbL)",
+        "source_reference": "https://nominatim.openstreetmap.org (query: Deen Dayal Upadhyay Hospital Hari Nagar)",
+        "retrieved_at": "2026-08-18"
+      },
+      "contact": {
+        "phone": "+91-11-25494402",
+        "email": "msdduh@yahoo.in",
+        "source": "Official website, Government of NCT of Delhi - DDUH Contact Us page",
+        "source_reference": "https://dduh.delhi.gov.in/en/dduh/contact-us",
+        "source_date": "2026-08-17",
+        "retrieved_at": "2026-08-18",
+        "note": "Hospital exchange 25494402-08 (7 lines)."
+      },
+      "status": "available",
+      "status_source": "Official website, Government of NCT of Delhi - DDUH Emergency Services page; DGHS Emergency Medical Care page",
+      "status_source_reference": "https://dduh.delhi.gov.in/en/dduh/emergency-services ; https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+      "status_source_date": "2026-08-12",
+      "capabilities": [
+        {
+          "service": "emergency_care",
+          "status": "available",
+          "source": "Official website, Government of NCT of Delhi - DDUH Emergency Services page",
+          "source_url": "https://dduh.delhi.gov.in/en/dduh/emergency-services",
+          "source_date": "2026-08-12",
+          "retrieved_at": "2026-08-18",
+          "notes": "Accident and Emergency working round the clock; emergency services available 24x7."
+        },
+        {
+          "service": "blood_bank",
+          "status": "available",
+          "source": "Official website, Government of NCT of Delhi - DDUH Emergency Services page",
+          "source_url": "https://dduh.delhi.gov.in/en/dduh/emergency-services",
+          "source_date": "2026-08-12",
+          "retrieved_at": "2026-08-18",
+          "notes": "Blood bank service available round the clock."
+        },
+        {
+          "service": "icu",
+          "status": "available",
+          "source": "Official website, Government of NCT of Delhi - DDUH Emergency Services page",
+          "source_url": "https://dduh.delhi.gov.in/en/dduh/emergency-services",
+          "source_date": "2026-08-12",
+          "retrieved_at": "2026-08-18",
+          "notes": "Anaesthesia services to all emergency operation theatres and ICU services round the clock."
+        },
+        {
+          "service": "trauma_care",
+          "status": "available",
+          "source": "Official website, Government of NCT of Delhi - DDUH home page (trauma block)",
+          "source_url": "https://dduh.delhi.gov.in/en",
+          "source_date": "2026-08-12",
+          "retrieved_at": "2026-08-18",
+          "notes": "Trauma block commissioned in 2008; emergency services shifted to this block."
+        },
+        {
+          "service": "ct_scan",
+          "status": "available",
+          "source": "Delhi Government - DGHS Emergency Medical Care guidelines",
+          "source_url": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+          "source_date": "2026-08-13",
+          "retrieved_at": "2026-08-18",
+          "notes": "Listed among major hospitals with CT scan and intensive care (ICU) facilities with ventilator support."
+        },
+        {
+          "service": "iccu",
+          "status": "available",
+          "source": "Delhi Government - DGHS Emergency Medical Care guidelines",
+          "source_url": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+          "source_date": "2026-08-13",
+          "retrieved_at": "2026-08-18",
+          "notes": "Listed among hospitals with Intensive Cardiac Care (ICCU) facilities."
+        },
+        {
+          "service": "dialysis",
+          "status": "available",
+          "source": "Official website, Government of NCT of Delhi - DDUH Contact Us page (dialysis lab listed)",
+          "source_url": "https://dduh.delhi.gov.in/en/dduh/contact-us",
+          "source_date": "2026-08-17",
+          "retrieved_at": "2026-08-18",
+          "notes": "Dialysis lab listed in the hospital extension lines."
+        }
+      ],
+      "source": "Official website, Government of NCT of Delhi - Deen Dayal Upadhyay Hospital (dduh.delhi.gov.in); Delhi Govt Hospitals directory (health.delhi.gov.in); DGHS Emergency Medical Care page",
+      "source_reference": "https://dduh.delhi.gov.in/en/dduh/contact-us ; https://health.delhi.gov.in/health/delhi-govt-hospital-0 ; https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+      "source_date": "2026-08-17",
+      "retrieved_at": "2026-08-18",
+      "geographic_scope": "India",
+      "data_status": "confirmed",
+      "notes": "Multi-specialty government hospital serving West Delhi."
+    },
+    {
+      "facility_id": "FAC-003",
+      "name": "Guru Gobind Singh Government Hospital (GGSGH)",
+      "facility_type": "district_hospital",
+      "address": "Raghubir Nagar, New Delhi",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "country": "India",
+      "postal_code": "110027",
+      "coordinates": null,
+      "contact": {
+        "phone": "+91-11-25984549",
+        "email": null,
+        "source": "Delhi Govt Hospitals directory, Department of Health & Family Welfare, Government of NCT of Delhi",
+        "source_reference": "https://health.delhi.gov.in/health/delhi-govt-hospital-0",
+        "source_date": "2026-08-18",
+        "retrieved_at": "2026-08-18",
+        "note": "As listed in the official Delhi government hospital directory."
+      },
+      "status": "available",
+      "status_source": "Official website, Government of NCT of Delhi - GGSGH Emergency Services page",
+      "status_source_reference": "https://ggsgh.delhi.gov.in/ggsgh/emergency-services",
+      "status_source_date": "2026-08-14",
+      "capabilities": [
+        {
+          "service": "emergency_care",
+          "status": "available",
+          "source": "Official website, Government of NCT of Delhi - GGSGH Emergency Services page",
+          "source_url": "https://ggsgh.delhi.gov.in/ggsgh/emergency-services",
+          "source_date": "2026-08-14",
+          "retrieved_at": "2026-08-18",
+          "notes": "Round the clock casualty/emergency services."
+        },
+        {
+          "service": "newborn_care",
+          "status": "available",
+          "source": "Official website, Government of NCT of Delhi - GGSGH Emergency Services page",
+          "source_url": "https://ggsgh.delhi.gov.in/ggsgh/emergency-services",
+          "source_date": "2026-08-14",
+          "retrieved_at": "2026-08-18",
+          "notes": "18-bedded level II SNCU catering to sick inborn neonates."
+        },
+        {
+          "service": "maternity_obstetrics",
+          "status": "available",
+          "source": "Official website, Government of NCT of Delhi - GGSGH Emergency Services page",
+          "source_url": "https://ggsgh.delhi.gov.in/ggsgh/emergency-services",
+          "source_date": "2026-08-14",
+          "retrieved_at": "2026-08-18",
+          "notes": "Labour room round the clock, about 275-300 deliveries per month, including night caesarean sections."
+        }
+      ],
+      "source": "Official website, Government of NCT of Delhi - GGSGH (ggsgh.delhi.gov.in); Delhi Govt Hospitals directory (health.delhi.gov.in)",
+      "source_reference": "https://ggsgh.delhi.gov.in/ggsgh/emergency-services ; https://health.delhi.gov.in/health/delhi-govt-hospital-0",
+      "source_date": "2026-08-14",
+      "retrieved_at": "2026-08-18",
+      "geographic_scope": "India",
+      "data_status": "confirmed",
+      "notes": null
+    },
+    {
+      "facility_id": "FAC-004",
+      "name": "Ambedkar Nagar Hospital (ANH)",
+      "facility_type": "district_hospital",
+      "address": "Block-B, Sector-5, Dakshinpuri, New Delhi",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "country": "India",
+      "postal_code": "110062",
+      "coordinates": null,
+      "contact": {
+        "phone": "+91-11-26052014",
+        "email": "mdanhospital@gmail.com",
+        "source": "Delhi Govt Hospitals page, Department of Health & Family Welfare, Government of NCT of Delhi",
+        "source_reference": "https://health.delhi.gov.in/health/delhi-government-hospitals",
+        "source_date": "2026-07-31",
+        "retrieved_at": "2026-08-18",
+        "note": "As listed in the official Delhi government hospitals list."
+      },
+      "status": "available",
+      "status_source": "Official website, Government of NCT of Delhi - ANH Casualty and Emergency Service page",
+      "status_source_reference": "https://anh.delhi.gov.in/anh/casualty-and-emergency-service",
+      "status_source_date": "2026-08-11",
+      "capabilities": [
+        {
+          "service": "emergency_care",
+          "status": "available",
+          "source": "Official website, Government of NCT of Delhi - ANH Casualty and Emergency Service page",
+          "source_url": "https://anh.delhi.gov.in/anh/casualty-and-emergency-service",
+          "source_date": "2026-08-11",
+          "retrieved_at": "2026-08-18",
+          "notes": "Emergency services available round the clock."
+        }
+      ],
+      "source": "Official website, Government of NCT of Delhi - Ambedkar Nagar Hospital (anh.delhi.gov.in); Delhi Govt Hospitals page (health.delhi.gov.in)",
+      "source_reference": "https://anh.delhi.gov.in/anh/casualty-and-emergency-service ; https://health.delhi.gov.in/health/delhi-government-hospitals",
+      "source_date": "2026-08-11",
+      "retrieved_at": "2026-08-18",
+      "geographic_scope": "India",
+      "data_status": "confirmed",
+      "notes": null
+    },
+    {
+      "facility_id": "FAC-005",
+      "name": "Guru Teg Bahadur Hospital (GTBH)",
+      "facility_type": "district_hospital",
+      "address": "Shahdara, Delhi",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "country": "India",
+      "postal_code": "110095",
+      "coordinates": {
+        "latitude": 28.68569,
+        "longitude": 77.30746,
+        "source": "OpenStreetMap (Nominatim geocoding, ODbL)",
+        "source_reference": "https://nominatim.openstreetmap.org (query: Guru Teg Bahadur Hospital Delhi)",
+        "retrieved_at": "2026-08-18"
+      },
+      "contact": {
+        "phone": "+91-11-22581730",
+        "email": null,
+        "source": "Delhi Govt Hospitals directory, Department of Health & Family Welfare, Government of NCT of Delhi",
+        "source_reference": "https://health.delhi.gov.in/health/delhi-govt-hospital-0",
+        "source_date": "2026-08-18",
+        "retrieved_at": "2026-08-18",
+        "note": "As listed in the official Delhi government hospital directory."
+      },
+      "status": "available",
+      "status_source": "Delhi Government - DGHS Emergency Medical Care guidelines",
+      "status_source_reference": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+      "status_source_date": "2026-08-13",
+      "capabilities": [
+        {
+          "service": "icu",
+          "status": "available",
+          "source": "Delhi Government - DGHS Emergency Medical Care guidelines",
+          "source_url": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+          "source_date": "2026-08-13",
+          "retrieved_at": "2026-08-18",
+          "notes": "Listed among major hospitals with intensive care facilities with ventilator support (without CT scan)."
+        },
+        {
+          "service": "iccu",
+          "status": "available",
+          "source": "Delhi Government - DGHS Emergency Medical Care guidelines",
+          "source_url": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+          "source_date": "2026-08-13",
+          "retrieved_at": "2026-08-18",
+          "notes": "Listed among hospitals with Intensive Cardiac Care (ICCU) facilities."
+        },
+        {
+          "service": "ct_scan",
+          "status": "unavailable",
+          "source": "Delhi Government - DGHS Emergency Medical Care guidelines",
+          "source_url": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+          "source_date": "2026-08-13",
+          "retrieved_at": "2026-08-18",
+          "notes": "DGHS lists GTBH among hospitals with intensive care/ventilator support explicitly WITHOUT CT scan."
+        }
+      ],
+      "source": "Delhi Govt Hospitals directory (health.delhi.gov.in); Delhi Government DGHS Emergency Medical Care page",
+      "source_reference": "https://health.delhi.gov.in/health/delhi-govt-hospital-0 ; https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+      "source_date": "2026-08-18",
+      "retrieved_at": "2026-08-18",
+      "geographic_scope": "India",
+      "data_status": "confirmed",
+      "notes": "Medical college hospital (UCMS) in East Delhi."
+    },
+    {
+      "facility_id": "FAC-006",
+      "name": "Lok Nayak Hospital (LNJP)",
+      "facility_type": "medical_college",
+      "address": "Jawahar Lal Nehru Marg, Delhi",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "country": "India",
+      "postal_code": "110002",
+      "coordinates": {
+        "latitude": 28.63881,
+        "longitude": 77.23867,
+        "source": "OpenStreetMap (Nominatim geocoding, ODbL)",
+        "source_reference": "https://nominatim.openstreetmap.org (query: Lok Nayak Hospital Delhi)",
+        "retrieved_at": "2026-08-18"
+      },
+      "contact": {
+        "phone": "+91-11-23236000",
+        "email": null,
+        "source": "Delhi Govt Hospitals directory, Department of Health & Family Welfare, Government of NCT of Delhi",
+        "source_reference": "https://health.delhi.gov.in/health/delhi-govt-hospital-0",
+        "source_date": "2026-08-18",
+        "retrieved_at": "2026-08-18",
+        "note": "As listed in the official Delhi government hospital directory."
+      },
+      "status": "available",
+      "status_source": "Delhi Government - DGHS Emergency Medical Care guidelines",
+      "status_source_reference": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+      "status_source_date": "2026-08-13",
+      "capabilities": [
+        {
+          "service": "emergency_care",
+          "status": "available",
+          "source": "Delhi Government - DGHS Emergency Medical Care guidelines",
+          "source_url": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+          "source_date": "2026-08-13",
+          "retrieved_at": "2026-08-18",
+          "notes": "Listed among major hospitals where CT scan with intensive care (ICU) facilities with ventilator support are available."
+        },
+        {
+          "service": "icu",
+          "status": "available",
+          "source": "Delhi Government - DGHS Emergency Medical Care guidelines",
+          "source_url": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+          "source_date": "2026-08-13",
+          "retrieved_at": "2026-08-18",
+          "notes": "Listed among major hospitals with CT scan and intensive care (ICU) facilities with ventilator support."
+        },
+        {
+          "service": "ct_scan",
+          "status": "available",
+          "source": "Delhi Government - DGHS Emergency Medical Care guidelines",
+          "source_url": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+          "source_date": "2026-08-13",
+          "retrieved_at": "2026-08-18",
+          "notes": "Listed among major hospitals with CT scan facilities."
+        },
+        {
+          "service": "iccu",
+          "status": "available",
+          "source": "Delhi Government - DGHS Emergency Medical Care guidelines",
+          "source_url": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+          "source_date": "2026-08-13",
+          "retrieved_at": "2026-08-18",
+          "notes": "Listed among hospitals with Intensive Cardiac Care (ICCU) facilities."
+        },
+        {
+          "service": "blood_bank",
+          "status": "available",
+          "source": "Delhi Government - DGHS Emergency Medical Care guidelines (regional blood transfusion centres)",
+          "source_url": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+          "source_date": "2026-08-13",
+          "retrieved_at": "2026-08-18",
+          "notes": "Named among the five regional blood transfusion centres in Delhi."
+        }
+      ],
+      "source": "Delhi Govt Hospitals directory (health.delhi.gov.in); Delhi Government DGHS Emergency Medical Care page",
+      "source_reference": "https://health.delhi.gov.in/health/delhi-govt-hospital-0 ; https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+      "source_date": "2026-08-18",
+      "retrieved_at": "2026-08-18",
+      "geographic_scope": "India",
+      "data_status": "confirmed",
+      "notes": "Government hospital associated with MAMC; regional blood transfusion centre."
+    },
+    {
+      "facility_id": "FAC-007",
+      "name": "Safdarjung Hospital",
+      "facility_type": "medical_college",
+      "address": "New Delhi",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "country": "India",
+      "postal_code": null,
+      "coordinates": {
+        "latitude": 28.56976,
+        "longitude": 77.20461,
+        "source": "OpenStreetMap (Nominatim geocoding, ODbL)",
+        "source_reference": "https://nominatim.openstreetmap.org (query: Safdarjung Hospital New Delhi)",
+        "retrieved_at": "2026-08-18"
+      },
+      "contact": null,
+      "status": "available",
+      "status_source": "Delhi Government - DGHS Emergency Medical Care guidelines",
+      "status_source_reference": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+      "status_source_date": "2026-08-13",
+      "capabilities": [
+        {
+          "service": "icu",
+          "status": "available",
+          "source": "Delhi Government - DGHS Emergency Medical Care guidelines",
+          "source_url": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+          "source_date": "2026-08-13",
+          "retrieved_at": "2026-08-18",
+          "notes": "Listed among major hospitals with CT scan and intensive care (ICU) facilities with ventilator support."
+        },
+        {
+          "service": "ct_scan",
+          "status": "available",
+          "source": "Delhi Government - DGHS Emergency Medical Care guidelines",
+          "source_url": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+          "source_date": "2026-08-13",
+          "retrieved_at": "2026-08-18",
+          "notes": "Listed among major hospitals with CT scan facilities."
+        },
+        {
+          "service": "iccu",
+          "status": "available",
+          "source": "Delhi Government - DGHS Emergency Medical Care guidelines",
+          "source_url": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+          "source_date": "2026-08-13",
+          "retrieved_at": "2026-08-18",
+          "notes": "Listed among hospitals with Intensive Cardiac Care (ICCU) facilities."
+        }
+      ],
+      "source": "Delhi Government DGHS Emergency Medical Care page; OpenStreetMap (coordinates)",
+      "source_reference": "https://dgehs.delhi.gov.in/dghs/emergency-medical-care",
+      "source_date": "2026-08-13",
+      "retrieved_at": "2026-08-18",
+      "geographic_scope": "India",
+      "data_status": "confirmed",
+      "notes": "Central government hospital (under MoHFW) with medical college."
+    },
+    {
+      "facility_id": "FAC-008",
+      "name": "Dr. Baba Saheb Ambedkar Hospital (BSAH)",
+      "facility_type": "district_hospital",
+      "address": "Sector 6, Rohini, New Delhi",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "country": "India",
+      "postal_code": "110085",
+      "coordinates": null,
+      "contact": {
+        "phone": "+91-11-27055585",
+        "email": null,
+        "source": "Delhi Govt Hospitals directory, Department of Health & Family Welfare, Government of NCT of Delhi",
+        "source_reference": "https://health.delhi.gov.in/health/delhi-govt-hospital-0",
+        "source_date": "2026-08-18",
+        "retrieved_at": "2026-08-18",
+        "note": "As listed in the official Delhi government hospital directory."
+      },
+      "status": "unknown",
+      "status_source": "Delhi Govt Hospitals directory, Department of Health & Family Welfare, Government of NCT of Delhi (identity only; no service/availability confirmation retrieved)",
+      "status_source_reference": "https://health.delhi.gov.in/health/delhi-govt-hospital-0",
+      "status_source_date": "2026-08-18",
+      "capabilities": [],
+      "source": "Delhi Govt Hospitals directory, Department of Health & Family Welfare, Government of NCT of Delhi",
+      "source_reference": "https://health.delhi.gov.in/health/delhi-govt-hospital-0",
+      "source_date": "2026-08-18",
+      "retrieved_at": "2026-08-18",
+      "geographic_scope": "India",
+      "data_status": "confirmed",
+      "notes": "Facility identity confirmed; service-level availability is Unknown (no confirmation retrieved)."
+    },
+    {
+      "facility_id": "FAC-009",
+      "name": "District Women Hospital (DWH), Gonda",
+      "facility_type": "district_hospital",
+      "address": "Gonda district",
+      "city": "Gonda",
+      "state": "Uttar Pradesh",
+      "country": "India",
+      "postal_code": null,
+      "coordinates": {
+        "latitude": 27.13426,
+        "longitude": 81.96303,
+        "source": "OpenStreetMap (Nominatim geocoding, ODbL)",
+        "source_reference": "https://nominatim.openstreetmap.org (query: District Women Hospital Gonda Uttar Pradesh)",
+        "retrieved_at": "2026-08-18"
+      },
+      "contact": null,
+      "status": "available",
+      "status_source": "National Health Mission - Monitoring of Essential Components of the Programme Implementation Plan, Gonda District (PRC-IEG report commissioned by MoHFW)",
+      "status_source_reference": "https://iegindia.org/wp-content/uploads/2026/04/Gonda-District.pdf",
+      "status_source_date": "2022-11-28",
+      "capabilities": [
+        {
+          "service": "newborn_care",
+          "status": "available",
+          "source": "National Health Mission - Monitoring report, Gonda District (PRC-IEG)",
+          "source_url": "https://iegindia.org/wp-content/uploads/2026/04/Gonda-District.pdf",
+          "source_date": "2022-11-28",
+          "retrieved_at": "2026-08-18",
+          "notes": "Report states a Special Newborn Care Unit (SNCU) was functioning at DWH Gonda."
+        },
+        {
+          "service": "maternity_obstetrics",
+          "status": "available",
+          "source": "National Health Mission - Monitoring report, Gonda District (PRC-IEG)",
+          "source_url": "https://iegindia.org/wp-content/uploads/2026/04/Gonda-District.pdf",
+          "source_date": "2022-11-28",
+          "retrieved_at": "2026-08-18",
+          "notes": "Report states the District Women Hospital was conducting more than 30 deliveries per month."
+        }
+      ],
+      "source": "National Health Mission - Monitoring of Essential Components of the Programme Implementation Plan, Gonda District (PRC-IEG report commissioned by MoHFW)",
+      "source_reference": "https://iegindia.org/wp-content/uploads/2026/04/Gonda-District.pdf",
+      "source_date": "2022-11-28",
+      "retrieved_at": "2026-08-18",
+      "geographic_scope": "India",
+      "data_status": "confirmed",
+      "notes": "Source predates the 90-day staleness window; all status data from this source is flagged stale."
+    },
+    {
+      "facility_id": "FAC-010",
+      "name": "Community Health Centre Colonelganj",
+      "facility_type": "chc",
+      "address": "Colonelganj, Gonda district",
+      "city": "Gonda",
+      "state": "Uttar Pradesh",
+      "country": "India",
+      "postal_code": null,
+      "coordinates": {
+        "latitude": 27.13953,
+        "longitude": 81.75950,
+        "source": "OpenStreetMap (Nominatim geocoding, ODbL)",
+        "source_reference": "https://nominatim.openstreetmap.org (query: Community Health Centre Colonelganj Gonda)",
+        "retrieved_at": "2026-08-18"
+      },
+      "contact": null,
+      "status": "unknown",
+      "status_source": "National Health Mission - Monitoring report, Gonda District (PRC-IEG)",
+      "status_source_reference": "https://iegindia.org/wp-content/uploads/2026/04/Gonda-District.pdf",
+      "status_source_date": "2022-11-28",
+      "capabilities": [],
+      "source": "National Health Mission - Monitoring of Essential Components of the Programme Implementation Plan, Gonda District (PRC-IEG report commissioned by MoHFW)",
+      "source_reference": "https://iegindia.org/wp-content/uploads/2026/04/Gonda-District.pdf",
+      "source_date": "2022-11-28",
+      "retrieved_at": "2026-08-18",
+      "geographic_scope": "India",
+      "data_status": "confirmed",
+      "notes": "Facility identity confirmed by the monitoring report; service-level availability is Unknown."
+    },
+    {
+      "facility_id": "FAC-011",
+      "name": "Primary Health Centre Kanjemau (PHC-HWC)",
+      "facility_type": "phc",
+      "address": "Kanjemau, Gonda district",
+      "city": "Gonda",
+      "state": "Uttar Pradesh",
+      "country": "India",
+      "postal_code": null,
+      "coordinates": null,
+      "contact": null,
+      "status": "unknown",
+      "status_source": "National Health Mission - Monitoring report, Gonda District (PRC-IEG)",
+      "status_source_reference": "https://iegindia.org/wp-content/uploads/2026/04/Gonda-District.pdf",
+      "status_source_date": "2022-11-28",
+      "capabilities": [],
+      "source": "National Health Mission - Monitoring of Essential Components of the Programme Implementation Plan, Gonda District (PRC-IEG report commissioned by MoHFW)",
+      "source_reference": "https://iegindia.org/wp-content/uploads/2026/04/Gonda-District.pdf",
+      "source_date": "2022-11-28",
+      "retrieved_at": "2026-08-18",
+      "geographic_scope": "India",
+      "data_status": "confirmed",
+      "notes": "Facility identity confirmed by the monitoring report; service-level availability is Unknown."
+    }
+  ]
+}
