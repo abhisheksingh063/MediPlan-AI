@@ -1,0 +1,622 @@
+{
+  "artifact": {
+    "created": "2026-08-18",
+    "description": "Frozen inference configuration for the selected model: prototype review threshold and calibration method, decided on validation data only. Not a clinically validated configuration.",
+    "version": "validation-config-v1"
+  },
+  "calibration": {
+    "assessment": {
+      "isotonic": {
+        "brier_score": 0.095935,
+        "calibration_curve": [
+          {
+            "bin": 1,
+            "bin_edge_hi": 0.1,
+            "bin_edge_lo": 0.0,
+            "count": 6626,
+            "mean_predicted_probability": 0.069686,
+            "observed_frequency": 0.071084
+          },
+          {
+            "bin": 2,
+            "bin_edge_hi": 0.2,
+            "bin_edge_lo": 0.1,
+            "count": 7602,
+            "mean_predicted_probability": 0.12952,
+            "observed_frequency": 0.129308
+          },
+          {
+            "bin": 3,
+            "bin_edge_hi": 0.30000000000000004,
+            "bin_edge_lo": 0.2,
+            "count": 666,
+            "mean_predicted_probability": 0.225543,
+            "observed_frequency": 0.237237
+          },
+          {
+            "bin": 4,
+            "bin_edge_hi": 0.4,
+            "bin_edge_lo": 0.30000000000000004,
+            "count": 81,
+            "mean_predicted_probability": 0.353402,
+            "observed_frequency": 0.271605
+          },
+          {
+            "bin": 5,
+            "bin_edge_hi": 0.5,
+            "bin_edge_lo": 0.4,
+            "count": 47,
+            "mean_predicted_probability": 0.428189,
+            "observed_frequency": 0.361702
+          },
+          {
+            "bin": 6,
+            "bin_edge_hi": 0.6000000000000001,
+            "bin_edge_lo": 0.5,
+            "count": 5,
+            "mean_predicted_probability": 0.508955,
+            "observed_frequency": 1.0
+          },
+          {
+            "bin": 7,
+            "bin_edge_hi": 0.7000000000000001,
+            "bin_edge_lo": 0.6000000000000001,
+            "count": 0,
+            "mean_predicted_probability": 0.0,
+            "observed_frequency": 0.0
+          },
+          {
+            "bin": 8,
+            "bin_edge_hi": 0.8,
+            "bin_edge_lo": 0.7000000000000001,
+            "count": 0,
+            "mean_predicted_probability": 0.0,
+            "observed_frequency": 0.0
+          },
+          {
+            "bin": 9,
+            "bin_edge_hi": 0.9,
+            "bin_edge_lo": 0.8,
+            "count": 0,
+            "mean_predicted_probability": 0.0,
+            "observed_frequency": 0.0
+          },
+          {
+            "bin": 10,
+            "bin_edge_hi": 1.0,
+            "bin_edge_lo": 0.9,
+            "count": 0,
+            "mean_predicted_probability": 0.0,
+            "observed_frequency": 0.0
+          }
+        ],
+        "expected_calibration_error": 0.002054,
+        "n_bins": 10
+      },
+      "sigmoid": {
+        "brier_score": 0.095904,
+        "calibration_curve": [
+          {
+            "bin": 1,
+            "bin_edge_hi": 0.1,
+            "bin_edge_lo": 0.0,
+            "count": 7874,
+            "mean_predicted_probability": 0.082456,
+            "observed_frequency": 0.077089
+          },
+          {
+            "bin": 2,
+            "bin_edge_hi": 0.2,
+            "bin_edge_lo": 0.1,
+            "count": 6536,
+            "mean_predicted_probability": 0.125715,
+            "observed_frequency": 0.135404
+          },
+          {
+            "bin": 3,
+            "bin_edge_hi": 0.30000000000000004,
+            "bin_edge_lo": 0.2,
+            "count": 460,
+            "mean_predicted_probability": 0.238001,
+            "observed_frequency": 0.23913
+          },
+          {
+            "bin": 4,
+            "bin_edge_hi": 0.4,
+            "bin_edge_lo": 0.30000000000000004,
+            "count": 105,
+            "mean_predicted_probability": 0.340036,
+            "observed_frequency": 0.304762
+          },
+          {
+            "bin": 5,
+            "bin_edge_hi": 0.5,
+            "bin_edge_lo": 0.4,
+            "count": 29,
+            "mean_predicted_probability": 0.439745,
+            "observed_frequency": 0.310345
+          },
+          {
+            "bin": 6,
+            "bin_edge_hi": 0.6000000000000001,
+            "bin_edge_lo": 0.5,
+            "count": 14,
+            "mean_predicted_probability": 0.525428,
+            "observed_frequency": 0.357143
+          },
+          {
+            "bin": 7,
+            "bin_edge_hi": 0.7000000000000001,
+            "bin_edge_lo": 0.6000000000000001,
+            "count": 6,
+            "mean_predicted_probability": 0.646008,
+            "observed_frequency": 0.833333
+          },
+          {
+            "bin": 8,
+            "bin_edge_hi": 0.8,
+            "bin_edge_lo": 0.7000000000000001,
+            "count": 3,
+            "mean_predicted_probability": 0.728603,
+            "observed_frequency": 1.0
+          },
+          {
+            "bin": 9,
+            "bin_edge_hi": 0.9,
+            "bin_edge_lo": 0.8,
+            "count": 0,
+            "mean_predicted_probability": 0.0,
+            "observed_frequency": 0.0
+          },
+          {
+            "bin": 10,
+            "bin_edge_hi": 1.0,
+            "bin_edge_lo": 0.9,
+            "count": 0,
+            "mean_predicted_probability": 0.0,
+            "observed_frequency": 0.0
+          }
+        ],
+        "expected_calibration_error": 0.007843,
+        "n_bins": 10
+      },
+      "uncalibrated": {
+        "brier_score": 0.230936,
+        "calibration_curve": [
+          {
+            "bin": 1,
+            "bin_edge_hi": 0.1,
+            "bin_edge_lo": 0.0,
+            "count": 0,
+            "mean_predicted_probability": 0.0,
+            "observed_frequency": 0.0
+          },
+          {
+            "bin": 2,
+            "bin_edge_hi": 0.2,
+            "bin_edge_lo": 0.1,
+            "count": 0,
+            "mean_predicted_probability": 0.0,
+            "observed_frequency": 0.0
+          },
+          {
+            "bin": 3,
+            "bin_edge_hi": 0.30000000000000004,
+            "bin_edge_lo": 0.2,
+            "count": 221,
+            "mean_predicted_probability": 0.281949,
+            "observed_frequency": 0.031674
+          },
+          {
+            "bin": 4,
+            "bin_edge_hi": 0.4,
+            "bin_edge_lo": 0.30000000000000004,
+            "count": 2986,
+            "mean_predicted_probability": 0.365227,
+            "observed_frequency": 0.068989
+          },
+          {
+            "bin": 5,
+            "bin_edge_hi": 0.5,
+            "bin_edge_lo": 0.4,
+            "count": 7076,
+            "mean_predicted_probability": 0.449007,
+            "observed_frequency": 0.09723
+          },
+          {
+            "bin": 6,
+            "bin_edge_hi": 0.6000000000000001,
+            "bin_edge_lo": 0.5,
+            "count": 3237,
+            "mean_predicted_probability": 0.539999,
+            "observed_frequency": 0.135002
+          },
+          {
+            "bin": 7,
+            "bin_edge_hi": 0.7000000000000001,
+            "bin_edge_lo": 0.6000000000000001,
+            "count": 991,
+            "mean_predicted_probability": 0.642187,
+            "observed_frequency": 0.176589
+          },
+          {
+            "bin": 8,
+            "bin_edge_hi": 0.8,
+            "bin_edge_lo": 0.7000000000000001,
+            "count": 366,
+            "mean_predicted_probability": 0.744459,
+            "observed_frequency": 0.251366
+          },
+          {
+            "bin": 9,
+            "bin_edge_hi": 0.9,
+            "bin_edge_lo": 0.8,
+            "count": 123,
+            "mean_predicted_probability": 0.840849,
+            "observed_frequency": 0.292683
+          },
+          {
+            "bin": 10,
+            "bin_edge_hi": 1.0,
+            "bin_edge_lo": 0.9,
+            "count": 27,
+            "mean_predicted_probability": 0.930661,
+            "observed_frequency": 0.555556
+          }
+        ],
+        "expected_calibration_error": 0.36331,
+        "n_bins": 10
+      }
+    },
+    "calibrator_file": "C:\\Users\\abhis\\OneDrive\\Desktop\\MediPlan AI\\models\\selected_model_calibrator_v1.joblib",
+    "clinical_calibration": false,
+    "method": "sigmoid",
+    "rationale": "Calibration was applied using sigmoid calibration: validation Brier score improved from 0.230936 (uncalibrated) to 0.095904, and expected calibration error from 0.363310 to 0.007843."
+  },
+  "dataset": {
+    "dataset_version": "phase7-preprocessing-v1.0.0",
+    "feature_count": 55,
+    "name": "Diabetes 130-US Hospitals for Years 1999-2008",
+    "preprocessing_version": "1.0.0",
+    "source_url": "https://archive.ics.uci.edu/dataset/296/diabetes-130-us-hospitals-for-years-1999-2008"
+  },
+  "metrics": {
+    "test": {
+      "at_default_0_50_threshold": {
+        "accuracy": 0.674223,
+        "confusion_matrix": {
+          "false_negative": 861,
+          "false_positive": 4097,
+          "true_negative": 9442,
+          "true_positive": 819
+        },
+        "f1": 0.248332,
+        "false_negative_rate": 0.5125,
+        "false_positive_rate": 0.302607,
+        "precision": 0.166599,
+        "recall": 0.4875,
+        "specificity": 0.697393,
+        "threshold": 0.5
+      },
+      "at_selected_threshold": {
+        "accuracy": 0.548065,
+        "confusion_matrix": {
+          "false_negative": 588,
+          "false_positive": 6290,
+          "true_negative": 7249,
+          "true_positive": 1092
+        },
+        "f1": 0.241006,
+        "false_negative_rate": 0.35,
+        "false_positive_rate": 0.464584,
+        "precision": 0.147927,
+        "recall": 0.65,
+        "specificity": 0.535416,
+        "threshold": 0.1
+      },
+      "notes": "test_at_selected_threshold uses the frozen configuration (selected threshold and, if applied, calibrated probabilities); test_at_default_0_50_threshold uses the raw model probabilities at 0.50 for continuity with Phases 8/9."
+    },
+    "validation": {
+      "accuracy": 0.553404,
+      "confusion_matrix": {
+        "false_negative": 607,
+        "false_positive": 6104,
+        "true_negative": 7267,
+        "true_positive": 1049
+      },
+      "f1": 0.238166,
+      "false_negative_rate": 0.366546,
+      "false_positive_rate": 0.45651,
+      "precision": 0.146652,
+      "recall": 0.633454,
+      "specificity": 0.54349,
+      "threshold": 0.1
+    }
+  },
+  "model": {
+    "file": "C:\\Users\\abhis\\OneDrive\\Desktop\\MediPlan AI\\models\\selected_model_v1.joblib",
+    "name": "Logistic Regression (baseline)",
+    "target": "early_readmission",
+    "version": "selected-model-v1"
+  },
+  "threshold": {
+    "analysis_table": [
+      {
+        "accuracy": 0.11273,
+        "confusion_matrix": {
+          "false_negative": 1,
+          "false_positive": 13332,
+          "true_negative": 39,
+          "true_positive": 1655
+        },
+        "f1": 0.198882,
+        "false_negative_rate": 0.000604,
+        "false_positive_rate": 0.997083,
+        "precision": 0.110429,
+        "recall": 0.999396,
+        "specificity": 0.002917,
+        "threshold": 0.05
+      },
+      {
+        "accuracy": 0.553404,
+        "confusion_matrix": {
+          "false_negative": 607,
+          "false_positive": 6104,
+          "true_negative": 7267,
+          "true_positive": 1049
+        },
+        "f1": 0.238166,
+        "false_negative_rate": 0.366546,
+        "false_positive_rate": 0.45651,
+        "precision": 0.146652,
+        "recall": 0.633454,
+        "specificity": 0.54349,
+        "threshold": 0.1
+      },
+      {
+        "accuracy": 0.826645,
+        "confusion_matrix": {
+          "false_negative": 1319,
+          "false_positive": 1286,
+          "true_negative": 12085,
+          "true_positive": 337
+        },
+        "f1": 0.20555,
+        "false_negative_rate": 0.796498,
+        "false_positive_rate": 0.096178,
+        "precision": 0.20764,
+        "recall": 0.203502,
+        "specificity": 0.903822,
+        "threshold": 0.15
+      },
+      {
+        "accuracy": 0.870566,
+        "confusion_matrix": {
+          "false_negative": 1492,
+          "false_positive": 453,
+          "true_negative": 12918,
+          "true_positive": 164
+        },
+        "f1": 0.144303,
+        "false_negative_rate": 0.900966,
+        "false_positive_rate": 0.033879,
+        "precision": 0.265802,
+        "recall": 0.099034,
+        "specificity": 0.966121,
+        "threshold": 0.2
+      },
+      {
+        "accuracy": 0.881413,
+        "confusion_matrix": {
+          "false_negative": 1564,
+          "false_positive": 218,
+          "true_negative": 13153,
+          "true_positive": 92
+        },
+        "f1": 0.093591,
+        "false_negative_rate": 0.944444,
+        "false_positive_rate": 0.016304,
+        "precision": 0.296774,
+        "recall": 0.055556,
+        "specificity": 0.983696,
+        "threshold": 0.25
+      },
+      {
+        "accuracy": 0.886538,
+        "confusion_matrix": {
+          "false_negative": 1602,
+          "false_positive": 103,
+          "true_negative": 13268,
+          "true_positive": 54
+        },
+        "f1": 0.05957,
+        "false_negative_rate": 0.967391,
+        "false_positive_rate": 0.007703,
+        "precision": 0.343949,
+        "recall": 0.032609,
+        "specificity": 0.992297,
+        "threshold": 0.3
+      },
+      {
+        "accuracy": 0.887735,
+        "confusion_matrix": {
+          "false_negative": 1626,
+          "false_positive": 61,
+          "true_negative": 13310,
+          "true_positive": 30
+        },
+        "f1": 0.034345,
+        "false_negative_rate": 0.981884,
+        "false_positive_rate": 0.004562,
+        "precision": 0.32967,
+        "recall": 0.018116,
+        "specificity": 0.995438,
+        "threshold": 0.35
+      },
+      {
+        "accuracy": 0.889266,
+        "confusion_matrix": {
+          "false_negative": 1634,
+          "false_positive": 30,
+          "true_negative": 13341,
+          "true_positive": 22
+        },
+        "f1": 0.025761,
+        "false_negative_rate": 0.986715,
+        "false_positive_rate": 0.002244,
+        "precision": 0.423077,
+        "recall": 0.013285,
+        "specificity": 0.997756,
+        "threshold": 0.4
+      },
+      {
+        "accuracy": 0.889931,
+        "confusion_matrix": {
+          "false_negative": 1639,
+          "false_positive": 15,
+          "true_negative": 13356,
+          "true_positive": 17
+        },
+        "f1": 0.020142,
+        "false_negative_rate": 0.989734,
+        "false_positive_rate": 0.001122,
+        "precision": 0.53125,
+        "recall": 0.010266,
+        "specificity": 0.998878,
+        "threshold": 0.45
+      },
+      {
+        "accuracy": 0.889998,
+        "confusion_matrix": {
+          "false_negative": 1643,
+          "false_positive": 10,
+          "true_negative": 13361,
+          "true_positive": 13
+        },
+        "f1": 0.015485,
+        "false_negative_rate": 0.99215,
+        "false_positive_rate": 0.000748,
+        "precision": 0.565217,
+        "recall": 0.00785,
+        "specificity": 0.999252,
+        "threshold": 0.5
+      },
+      {
+        "accuracy": 0.890331,
+        "confusion_matrix": {
+          "false_negative": 1647,
+          "false_positive": 1,
+          "true_negative": 13370,
+          "true_positive": 9
+        },
+        "f1": 0.010804,
+        "false_negative_rate": 0.994565,
+        "false_positive_rate": 7.5e-05,
+        "precision": 0.9,
+        "recall": 0.005435,
+        "specificity": 0.999925,
+        "threshold": 0.55
+      },
+      {
+        "accuracy": 0.890264,
+        "confusion_matrix": {
+          "false_negative": 1648,
+          "false_positive": 1,
+          "true_negative": 13370,
+          "true_positive": 8
+        },
+        "f1": 0.00961,
+        "false_negative_rate": 0.995169,
+        "false_positive_rate": 7.5e-05,
+        "precision": 0.888889,
+        "recall": 0.004831,
+        "specificity": 0.999925,
+        "threshold": 0.6
+      },
+      {
+        "accuracy": 0.890065,
+        "confusion_matrix": {
+          "false_negative": 1651,
+          "false_positive": 1,
+          "true_negative": 13370,
+          "true_positive": 5
+        },
+        "f1": 0.006017,
+        "false_negative_rate": 0.996981,
+        "false_positive_rate": 7.5e-05,
+        "precision": 0.833333,
+        "recall": 0.003019,
+        "specificity": 0.999925,
+        "threshold": 0.65
+      },
+      {
+        "accuracy": 0.889998,
+        "confusion_matrix": {
+          "false_negative": 1653,
+          "false_positive": 0,
+          "true_negative": 13371,
+          "true_positive": 3
+        },
+        "f1": 0.003617,
+        "false_negative_rate": 0.998188,
+        "false_positive_rate": 0.0,
+        "precision": 1.0,
+        "recall": 0.001812,
+        "specificity": 1.0,
+        "threshold": 0.7
+      },
+      {
+        "accuracy": 0.889865,
+        "confusion_matrix": {
+          "false_negative": 1655,
+          "false_positive": 0,
+          "true_negative": 13371,
+          "true_positive": 1
+        },
+        "f1": 0.001207,
+        "false_negative_rate": 0.999396,
+        "false_positive_rate": 0.0,
+        "precision": 1.0,
+        "recall": 0.000604,
+        "specificity": 1.0,
+        "threshold": 0.75
+      },
+      {
+        "accuracy": 0.889798,
+        "confusion_matrix": {
+          "false_negative": 1656,
+          "false_positive": 0,
+          "true_negative": 13371,
+          "true_positive": 0
+        },
+        "f1": 0.0,
+        "false_negative_rate": 1.0,
+        "false_positive_rate": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "threshold": 0.8
+      },
+      {
+        "accuracy": 0.889798,
+        "confusion_matrix": {
+          "false_negative": 1656,
+          "false_positive": 0,
+          "true_negative": 13371,
+          "true_positive": 0
+        },
+        "f1": 0.0,
+        "false_negative_rate": 1.0,
+        "false_positive_rate": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "specificity": 1.0,
+        "threshold": 0.85
+      }
+    ],
+    "clinically_validated": false,
+    "label": "prototype review threshold",
+    "rationale": "Selected prototype review threshold 0.1 (validation F1 0.238166, recall 0.633454, precision 0.146652, specificity 0.54349). Criterion: best precision/recall balance (maximum F1) on the validation partition, preferring a higher threshold as a tie-break. This is a prototype review threshold, not a clinically optimised decision boundary: no clinical cost model for false negatives vs false positives is available, so it must not be presented as clinically optimal.",
+    "selected": 0.1
+  }
+}
