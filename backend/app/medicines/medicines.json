@@ -1,0 +1,230 @@
+{
+  "schema_version": "1.0",
+  "as_of_date": "2026-08-18",
+  "geographic_scope": "India",
+  "currency": "INR",
+  "staleness_rule_days": 180,
+  "staleness_rule_source": "Phase 14 fixed numeric rule: any price whose source_date is older than 180 days before the dataset as_of_date is flagged stale and never shown as current. The PMBJP product list is revised through new tenders and annual NPPA/WPI adjustments; the 180-day default is documented in docs/medicine-affordability.md.",
+  "medicines": [
+    {
+      "medicine_id": "MED-001",
+      "generic_name": "Metformin",
+      "brand_name": "Jan Aushadhi (PMBJP)",
+      "strength": "500 mg",
+      "form": "Tablet",
+      "pack_size": "10 tablets",
+      "pack_size_units": 10,
+      "therapeutic_class": "Biguanide; anti-diabetic",
+      "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+      "geographic_scope": "India",
+      "currency": "INR",
+      "prices": [
+        {
+          "price": 6.19,
+          "price_unit": "per pack of 10 tablets",
+          "source": "PMBJP Product & MRP List (Government of India)",
+          "source_url": "https://janaushadhi.gov.in/productportfolio/ProductmrpList",
+          "source_date": "2026-06-01",
+          "retrieved_date": "2026-08-18",
+          "availability": "jan_aushadhi",
+          "notes": "Drug code 145. Price cross-checked against PMBJP database mirrors."
+        },
+        {
+          "price": 5.00,
+          "price_unit": "per pack of 10 tablets",
+          "source": "Generic Drug Scan (public Jan Aushadhi list mirror)",
+          "source_url": "https://www.genericdrugscan.com/brand/metformin-hydrochloride-500-mg-(jan-aushadhi)",
+          "source_date": "2021-07-23",
+          "retrieved_date": "2026-08-18",
+          "availability": "jan_aushadhi",
+          "notes": "Historical mirrored listing; differs from the current PMBJP figure and is shown separately, not averaged."
+        }
+      ]
+    },
+    {
+      "medicine_id": "MED-002",
+      "generic_name": "Metformin",
+      "brand_name": "Glycomet 500 (USV Ltd)",
+      "strength": "500 mg",
+      "form": "Tablet",
+      "pack_size": "10 tablets",
+      "pack_size_units": 10,
+      "therapeutic_class": "Biguanide; anti-diabetic",
+      "manufacturer": "USV Private Ltd",
+      "geographic_scope": "India",
+      "currency": "INR",
+      "prices": [
+        {
+          "price": 30.00,
+          "price_unit": "per pack of 10 tablets",
+          "source": "Jan Aushadhi Kendra Bhadohi price-comparison reference",
+          "source_url": "https://www.janaushadhibhadohi.in/2026/06/metformin-500mg.html",
+          "source_date": "2026-06-01",
+          "retrieved_date": "2026-08-18",
+          "availability": "brand",
+          "notes": "Reported branded-market MRP reference; a private-pharmacy range of 30-50 INR per strip is also reported by Journey for Health (2026-02-10)."
+        }
+      ]
+    },
+    {
+      "medicine_id": "MED-003",
+      "generic_name": "Glimepiride",
+      "brand_name": "Jan Aushadhi (PMBJP)",
+      "strength": "1 mg",
+      "form": "Tablet",
+      "pack_size": "10 tablets",
+      "pack_size_units": 10,
+      "therapeutic_class": "Sulfonylurea; anti-diabetic",
+      "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+      "geographic_scope": "India",
+      "currency": "INR",
+      "prices": [
+        {
+          "price": 4.13,
+          "price_unit": "per pack of 10 tablets",
+          "source": "PMBJP Product & MRP List (Government of India)",
+          "source_url": "https://janaushadhi.gov.in/productportfolio/ProductmrpList",
+          "source_date": "2026-06-01",
+          "retrieved_date": "2026-08-18",
+          "availability": "jan_aushadhi",
+          "notes": "Price cross-checked against PMBJP database mirrors."
+        }
+      ]
+    },
+    {
+      "medicine_id": "MED-004",
+      "generic_name": "Glimepiride",
+      "brand_name": "Market generic reference",
+      "strength": "1 mg",
+      "form": "Tablet",
+      "pack_size": "10 tablets",
+      "pack_size_units": 10,
+      "therapeutic_class": "Sulfonylurea; anti-diabetic",
+      "manufacturer": null,
+      "geographic_scope": "India",
+      "currency": "INR",
+      "prices": [
+        {
+          "price": null,
+          "price_unit": "per pack of 10 tablets",
+          "source": "No verified public price currently held",
+          "source_url": null,
+          "source_date": "2026-08-18",
+          "retrieved_date": "2026-08-18",
+          "availability": "brand",
+          "notes": "No verified government or licensed price is held for this product. Price unavailable."
+        }
+      ]
+    },
+    {
+      "medicine_id": "MED-005",
+      "generic_name": "Atorvastatin",
+      "brand_name": "Jan Aushadhi (PMBJP)",
+      "strength": "10 mg",
+      "form": "Tablet",
+      "pack_size": "10 tablets",
+      "pack_size_units": 10,
+      "therapeutic_class": "HMG-CoA reductase inhibitor (statin)",
+      "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+      "geographic_scope": "India",
+      "currency": "INR",
+      "prices": [
+        {
+          "price": 8.25,
+          "price_unit": "per pack of 10 tablets",
+          "source": "PMBJP Product & MRP List (Government of India)",
+          "source_url": "https://janaushadhi.gov.in/productportfolio/ProductmrpList",
+          "source_date": "2026-06-01",
+          "retrieved_date": "2026-08-18",
+          "availability": "jan_aushadhi",
+          "notes": "Drug code 266."
+        }
+      ]
+    },
+    {
+      "medicine_id": "MED-006",
+      "generic_name": "Amlodipine",
+      "brand_name": "Jan Aushadhi (PMBJP)",
+      "strength": "5 mg",
+      "form": "Tablet",
+      "pack_size": "10 tablets",
+      "pack_size_units": 10,
+      "therapeutic_class": "Calcium channel blocker; anti-hypertensive",
+      "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+      "geographic_scope": "India",
+      "currency": "INR",
+      "prices": [
+        {
+          "price": 5.16,
+          "price_unit": "per pack of 10 tablets",
+          "source": "PMBJP Product & MRP List (Government of India)",
+          "source_url": "https://janaushadhi.gov.in/productportfolio/ProductmrpList",
+          "source_date": "2026-06-01",
+          "retrieved_date": "2026-08-18",
+          "availability": "jan_aushadhi",
+          "notes": "Price cross-checked against PMBJP database mirrors."
+        }
+      ]
+    },
+    {
+      "medicine_id": "MED-007",
+      "generic_name": "Telmisartan",
+      "brand_name": "Jan Aushadhi (PMBJP)",
+      "strength": "40 mg",
+      "form": "Tablet",
+      "pack_size": "10 tablets",
+      "pack_size_units": 10,
+      "therapeutic_class": "Angiotensin II receptor blocker; anti-hypertensive",
+      "manufacturer": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+      "geographic_scope": "India",
+      "currency": "INR",
+      "prices": [
+        {
+          "price": 11.25,
+          "price_unit": "per pack of 10 tablets",
+          "source": "PMBJP Product & MRP List (Government of India)",
+          "source_url": "https://janaushadhi.gov.in/productportfolio/ProductmrpList",
+          "source_date": "2026-06-01",
+          "retrieved_date": "2026-08-18",
+          "availability": "jan_aushadhi",
+          "notes": "Drug code 300."
+        },
+        {
+          "price": 20.79,
+          "price_unit": "per pack of 10 tablets",
+          "source": "Generic Drug Scan (public Jan Aushadhi list mirror)",
+          "source_url": "https://www.genericdrugscan.com/brand/telmisartan-40-mg-(jan-aushadhi)",
+          "source_date": "2021-07-23",
+          "retrieved_date": "2026-08-18",
+          "availability": "jan_aushadhi",
+          "notes": "Historical mirrored listing; differs from the current PMBJP figure and is shown separately, not averaged."
+        }
+      ]
+    },
+    {
+      "medicine_id": "MED-008",
+      "generic_name": "Paracetamol",
+      "brand_name": "Market generic reference (NPPA ceiling)",
+      "strength": "500 mg",
+      "form": "Tablet",
+      "pack_size": "per tablet",
+      "pack_size_units": 1,
+      "therapeutic_class": "Analgesic / antipyretic",
+      "manufacturer": null,
+      "geographic_scope": "India",
+      "currency": "INR",
+      "prices": [
+        {
+          "price": 0.93,
+          "price_unit": "per tablet (ceiling price, exclusive of GST)",
+          "source": "NPPA ceiling price, S.O. 1575(E) (Government of India)",
+          "source_url": "https://nppa.gov.in/en/listofnotifiedprice",
+          "source_date": "2026-04-01",
+          "retrieved_date": "2026-08-18",
+          "availability": "brand",
+          "notes": "Regulatory ceiling price for Paracetamol 500 mg tablets, effective 1 April 2026; a cap, not a retail MRP."
+        }
+      ]
+    }
+  ]
+}
