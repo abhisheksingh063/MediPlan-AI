@@ -1,0 +1,54 @@
+{
+  "guideline_version": "ADA Standards of Care in Diabetes — 2026 (Diabetes Care, Vol 49, Supplement 1, January 2026)",
+  "inputs": [
+    {
+      "field": "age",
+      "aliases": [],
+      "unit": "years",
+      "recency_days": null,
+      "recency_source": "Recorded patient age; treated as current."
+    },
+    {
+      "field": "bmi",
+      "aliases": [],
+      "unit": "kg/m^2",
+      "recency_days": null,
+      "recency_source": "Computed from recorded height (cm) and weight (kg); treated as current."
+    },
+    {
+      "field": "hba1c",
+      "aliases": ["hba1c", "a1c", "hemoglobin a1c", "glycated hemoglobin", "glycohemoglobin"],
+      "unit": "%",
+      "recency_days": 183,
+      "recency_source": "ADA 2026 Section 6 (Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises): A1C measured at least twice yearly when at goal and quarterly when not at goal."
+    },
+    {
+      "field": "egfr",
+      "aliases": ["egfr", "estimated gfr", "estimated glomerular filtration rate"],
+      "unit": "mL/min/1.73m^2",
+      "recency_days": 365,
+      "recency_source": "ADA 2026 Section 11 (Chronic Kidney Disease and Risk Management): annual screening of eGFR (and UACR) in people with type 2 diabetes."
+    },
+    {
+      "field": "uacr",
+      "aliases": ["uacr", "albumin/creatinine ratio", "albumin-creatinine ratio", "urine albumin", "urine albumin-to-creatinine ratio"],
+      "unit": "mg/g",
+      "recency_days": 365,
+      "recency_source": "ADA 2026 Section 11 (Chronic Kidney Disease and Risk Management): annual screening of UACR (and eGFR) in people with type 2 diabetes."
+    },
+    {
+      "field": "systolic_bp",
+      "aliases": ["systolic bp", "systolic blood pressure", "bp systolic", "blood pressure systolic"],
+      "unit": "mmHg",
+      "recency_days": 183,
+      "recency_source": "ADA 2026 Section 10 (Cardiovascular Disease and Risk Management): blood pressure measured at every routine clinical visit, or at least every 6 months."
+    },
+    {
+      "field": "diastolic_bp",
+      "aliases": ["diastolic bp", "diastolic blood pressure", "bp diastolic", "blood pressure diastolic"],
+      "unit": "mmHg",
+      "recency_days": 183,
+      "recency_source": "ADA 2026 Section 10 (Cardiovascular Disease and Risk Management): blood pressure measured at every routine clinical visit, or at least every 6 months."
+    }
+  ]
+}

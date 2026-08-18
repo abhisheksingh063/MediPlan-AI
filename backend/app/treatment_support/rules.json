@@ -1,0 +1,275 @@
+{
+  "guideline_version": "ADA Standards of Care in Diabetes — 2026 (Diabetes Care, Vol 49, Supplement 1, January 2026)",
+  "rules": [
+    {
+      "rule_id": "TDS-001",
+      "title": "Glycemic goal threshold",
+      "clinical_context": "Most recent A1C relative to the individualized glycemic goal.",
+      "required_inputs": ["hba1c"],
+      "trigger": {
+        "op": "all",
+        "clauses": [
+          { "field": "hba1c", "op": "gte", "value": 7.0 }
+        ]
+      },
+      "logic_summary": "Triggers when the most recent A1C is at or above 7.0%.",
+      "output_text": "Guideline indicates that a reasonable A1C goal for many nonpregnant adults is <7.0%. The most recent A1C of {hba1c}% is at or above this goal; this factor may warrant clinician assessment.",
+      "severity_tag": "consider_review",
+      "requires_clinician_review": true,
+      "evidence_source": {
+        "organization": "American Diabetes Association",
+        "document": "Standards of Care in Diabetes — 2026",
+        "version": "2026 (Diabetes Care, Vol 49, Supplement 1, January 2026)",
+        "section": "6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises",
+        "table_or_recommendation": "Table 6.3",
+        "doi": "10.2337/dc26-S006"
+      }
+    },
+    {
+      "rule_id": "TDS-002",
+      "title": "A1C at least 1.5 percentage points above goal",
+      "clinical_context": "Combination pharmacologic therapy is generally indicated when A1C is substantially above the individualized goal.",
+      "required_inputs": ["hba1c"],
+      "trigger": {
+        "op": "all",
+        "clauses": [
+          { "field": "hba1c", "op": "gte", "value": 8.5 }
+        ]
+      },
+      "logic_summary": "Triggers when the most recent A1C is at or above 8.5% (goal 7.0% + 1.5 percentage points).",
+      "output_text": "Guideline indicates that when A1C is at least 1.5% above the individualized glycemic goal, many people will require combination pharmacologic therapy. An A1C of {hba1c}% may warrant clinician assessment.",
+      "severity_tag": "consider_review",
+      "requires_clinician_review": true,
+      "evidence_source": {
+        "organization": "American Diabetes Association",
+        "document": "Standards of Care in Diabetes — 2026",
+        "version": "2026 (Diabetes Care, Vol 49, Supplement 1, January 2026)",
+        "section": "9. Pharmacologic Approaches to Glycemic Treatment",
+        "table_or_recommendation": "Recommendation 9.6 / Table 9.2",
+        "doi": "10.2337/dc26-S009"
+      }
+    },
+    {
+      "rule_id": "TDS-003",
+      "title": "Marked hyperglycemia",
+      "clinical_context": "Very high A1C generally warrants prompt review and consideration of intensive glycemic management, including insulin.",
+      "required_inputs": ["hba1c"],
+      "trigger": {
+        "op": "all",
+        "clauses": [
+          { "field": "hba1c", "op": "gt", "value": 10.0 }
+        ]
+      },
+      "logic_summary": "Triggers when the most recent A1C is greater than 10.0%.",
+      "output_text": "Guideline indicates that a very high A1C (greater than 10%) generally warrants prompt clinician review and consideration of intensive glycemic management. An A1C of {hba1c}% may warrant clinician assessment.",
+      "severity_tag": "urgent_review",
+      "requires_clinician_review": true,
+      "evidence_source": {
+        "organization": "American Diabetes Association",
+        "document": "Standards of Care in Diabetes — 2026",
+        "version": "2026 (Diabetes Care, Vol 49, Supplement 1, January 2026)",
+        "section": "9. Pharmacologic Approaches to Glycemic Treatment",
+        "table_or_recommendation": "Recommendation 9.20",
+        "doi": "10.2337/dc26-S009"
+      }
+    },
+    {
+      "rule_id": "TDS-004",
+      "title": "Reduced kidney function",
+      "clinical_context": "Chronic kidney disease in diabetes is defined in part by persistently reduced eGFR.",
+      "required_inputs": ["egfr"],
+      "trigger": {
+        "op": "all",
+        "clauses": [
+          { "field": "egfr", "op": "lt", "value": 60.0 }
+        ]
+      },
+      "logic_summary": "Triggers when the most recent eGFR is below 60 mL/min/1.73 m^2. Persistence across at least 3 months is required for the ADA diagnosis; a single reading only flags for review.",
+      "output_text": "Guideline defines chronic kidney disease in part as persistent eGFR below 60 mL/min/1.73 m^2. The most recent eGFR of {egfr} mL/min/1.73 m^2 may warrant clinician assessment, including confirmation of persistence over time.",
+      "severity_tag": "consider_review",
+      "requires_clinician_review": true,
+      "evidence_source": {
+        "organization": "American Diabetes Association",
+        "document": "Standards of Care in Diabetes — 2026",
+        "version": "2026 (Diabetes Care, Vol 49, Supplement 1, January 2026)",
+        "section": "11. Chronic Kidney Disease and Risk Management",
+        "table_or_recommendation": "Section 11 definition of CKD",
+        "doi": "10.2337/dc26-S011"
+      }
+    },
+    {
+      "rule_id": "TDS-005",
+      "title": "Albuminuria",
+      "clinical_context": "Elevated urinary albumin-to-creatinine ratio is a marker of kidney damage in diabetes.",
+      "required_inputs": ["uacr"],
+      "trigger": {
+        "op": "all",
+        "clauses": [
+          { "field": "uacr", "op": "gte", "value": 30.0 }
+        ]
+      },
+      "logic_summary": "Triggers when the most recent UACR is at or above 30 mg/g.",
+      "output_text": "Guideline indicates that an elevated urine albumin-to-creatinine ratio (at or above 30 mg/g) may signal kidney damage. The most recent UACR of {uacr} mg/g may warrant clinician assessment.",
+      "severity_tag": "consider_review",
+      "requires_clinician_review": true,
+      "evidence_source": {
+        "organization": "American Diabetes Association",
+        "document": "Standards of Care in Diabetes — 2026",
+        "version": "2026 (Diabetes Care, Vol 49, Supplement 1, January 2026)",
+        "section": "11. Chronic Kidney Disease and Risk Management",
+        "table_or_recommendation": "Section 11 definition of CKD (albuminuria)",
+        "doi": "10.2337/dc26-S011"
+      }
+    },
+    {
+      "rule_id": "TDS-006",
+      "title": "Obesity (BMI at or above 30)",
+      "clinical_context": "Weight management is recommended for adults with diabetes and obesity.",
+      "required_inputs": ["bmi"],
+      "trigger": {
+        "op": "all",
+        "clauses": [
+          { "field": "bmi", "op": "gte", "value": 30.0 }
+        ]
+      },
+      "logic_summary": "Triggers when the BMI computed from recorded height and weight is at or above 30 kg/m^2.",
+      "output_text": "Guideline recommends weight-management considerations for adults with diabetes and obesity (BMI at or above 30 kg/m^2). The computed BMI of {bmi} kg/m^2 may warrant clinician assessment.",
+      "severity_tag": "consider_review",
+      "requires_clinician_review": true,
+      "evidence_source": {
+        "organization": "American Diabetes Association",
+        "document": "Standards of Care in Diabetes — 2026",
+        "version": "2026 (Diabetes Care, Vol 49, Supplement 1, January 2026)",
+        "section": "8. Obesity and Weight Management for the Prevention and Treatment of Type 2 Diabetes",
+        "table_or_recommendation": "Section 8 BMI screening recommendation; Section 5 weight-loss target of 5-7%",
+        "doi": "10.2337/dc26-S008"
+      }
+    },
+    {
+      "rule_id": "TDS-007",
+      "title": "Overweight (BMI 25 to below 30)",
+      "clinical_context": "Weight-management considerations apply to adults with diabetes who are overweight.",
+      "required_inputs": ["bmi"],
+      "trigger": {
+        "op": "all",
+        "clauses": [
+          { "field": "bmi", "op": "gte", "value": 25.0 },
+          { "field": "bmi", "op": "lt", "value": 30.0 }
+        ]
+      },
+      "logic_summary": "Triggers when the computed BMI is between 25 (inclusive) and 30 (exclusive) kg/m^2.",
+      "output_text": "Guideline recommends weight-management considerations for adults with diabetes who are overweight (BMI 25 to below 30 kg/m^2). The computed BMI of {bmi} kg/m^2 may warrant clinician assessment.",
+      "severity_tag": "informational",
+      "requires_clinician_review": true,
+      "evidence_source": {
+        "organization": "American Diabetes Association",
+        "document": "Standards of Care in Diabetes — 2026",
+        "version": "2026 (Diabetes Care, Vol 49, Supplement 1, January 2026)",
+        "section": "8. Obesity and Weight Management for the Prevention and Treatment of Type 2 Diabetes",
+        "table_or_recommendation": "Section 8 BMI screening recommendation",
+        "doi": "10.2337/dc26-S008"
+      }
+    },
+    {
+      "rule_id": "TDS-008",
+      "title": "Blood pressure at or above the treatment goal",
+      "clinical_context": "Hypertension in diabetes is defined at or above 130/80 mmHg and the on-treatment goal is below 130/80 mmHg.",
+      "required_inputs": ["systolic_bp", "diastolic_bp"],
+      "trigger": {
+        "op": "any",
+        "clauses": [
+          { "field": "systolic_bp", "op": "gte", "value": 130.0 },
+          { "field": "diastolic_bp", "op": "gte", "value": 80.0 }
+        ]
+      },
+      "logic_summary": "Triggers when the most recent systolic blood pressure is at or above 130 mmHg or the diastolic is at or above 80 mmHg.",
+      "output_text": "Guideline defines hypertension as systolic blood pressure at or above 130 mmHg or diastolic at or above 80 mmHg, with an on-treatment goal below 130/80 mmHg. The most recent blood pressure of {systolic_bp}/{diastolic_bp} mmHg may warrant clinician assessment.",
+      "severity_tag": "consider_review",
+      "requires_clinician_review": true,
+      "evidence_source": {
+        "organization": "American Diabetes Association",
+        "document": "Standards of Care in Diabetes — 2026",
+        "version": "2026 (Diabetes Care, Vol 49, Supplement 1, January 2026)",
+        "section": "10. Cardiovascular Disease and Risk Management",
+        "table_or_recommendation": "Recommendations 10.1 and 10.4",
+        "doi": "10.2337/dc26-S010"
+      }
+    },
+    {
+      "rule_id": "TDS-009",
+      "title": "Severe hypertension (crisis threshold)",
+      "clinical_context": "Blood pressure above 180/120 mmHg meets the hypertensive-crisis threshold and warrants urgent review.",
+      "required_inputs": ["systolic_bp", "diastolic_bp"],
+      "trigger": {
+        "op": "any",
+        "clauses": [
+          { "field": "systolic_bp", "op": "gte", "value": 180.0 },
+          { "field": "diastolic_bp", "op": "gte", "value": 120.0 }
+        ]
+      },
+      "logic_summary": "Triggers when the most recent systolic blood pressure is at or above 180 mmHg or the diastolic is at or above 120 mmHg.",
+      "output_text": "A systolic blood pressure at or above 180 mmHg or a diastolic at or above 120 mmHg meets the hypertensive-crisis threshold (above 180/120 mmHg) per ACC/AHA 2017, as referenced by ADA 2026 Section 10. This warrants urgent clinician review.",
+      "severity_tag": "urgent_review",
+      "requires_clinician_review": true,
+      "evidence_source": {
+        "organization": "American College of Cardiology / American Heart Association",
+        "document": "2017 Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults",
+        "version": "2017 (JACC Vol 71, No 19)",
+        "section": "Hypertensive crises (BP > 180/120 mmHg)",
+        "table_or_recommendation": "Section on hypertensive emergencies/urgencies; referenced by ADA 2026 Section 10 for blood pressure thresholds",
+        "doi": "10.1161/HYP.0000000000000065"
+      }
+    },
+    {
+      "rule_id": "TDS-010",
+      "title": "Statin consideration for adults aged 40 to 75",
+      "clinical_context": "Statin therapy is recommended for most adults with diabetes aged 40-75, with intensity based on atherosclerotic cardiovascular disease risk.",
+      "required_inputs": ["age"],
+      "trigger": {
+        "op": "all",
+        "clauses": [
+          { "field": "age", "op": "gte", "value": 40.0 },
+          { "field": "age", "op": "lte", "value": 75.0 }
+        ]
+      },
+      "logic_summary": "Triggers when the recorded age is between 40 and 75 inclusive.",
+      "output_text": "Guideline indicates that statin therapy is recommended for most adults with diabetes aged 40 to 75 years (intensity depending on atherosclerotic cardiovascular disease risk). This factor may warrant clinician assessment.",
+      "severity_tag": "informational",
+      "requires_clinician_review": true,
+      "evidence_source": {
+        "organization": "American Diabetes Association",
+        "document": "Standards of Care in Diabetes — 2026",
+        "version": "2026 (Diabetes Care, Vol 49, Supplement 1, January 2026)",
+        "section": "10. Cardiovascular Disease and Risk Management",
+        "table_or_recommendation": "Lipid management recommendations for adults 40-75 (moderate-intensity statin without ASCVD risk factors; high-intensity with risk factors)",
+        "doi": "10.2337/dc26-S010"
+      }
+    },
+    {
+      "rule_id": "TDS-011",
+      "title": "Possible less-stringent glycemic goal for older adults",
+      "clinical_context": "Older adults with comorbidities may reasonably target less-stringent A1C goals.",
+      "required_inputs": ["age", "hba1c"],
+      "trigger": {
+        "op": "all",
+        "clauses": [
+          { "field": "age", "op": "gte", "value": 65.0 },
+          { "field": "hba1c", "op": "gte", "value": 7.0 },
+          { "field": "hba1c", "op": "lt", "value": 8.5 }
+        ]
+      },
+      "logic_summary": "Triggers when the recorded age is at or above 65 and the most recent A1C is between 7.0% (inclusive) and 8.5% (exclusive).",
+      "output_text": "Guideline indicates that less-stringent A1C goals (for example, below 8%) may be appropriate for some older adults, depending on comorbidities and life expectancy. The A1C of {hba1c}% may warrant clinician assessment.",
+      "severity_tag": "informational",
+      "requires_clinician_review": true,
+      "evidence_source": {
+        "organization": "American Diabetes Association",
+        "document": "Standards of Care in Diabetes — 2026",
+        "version": "2026 (Diabetes Care, Vol 49, Supplement 1, January 2026)",
+        "section": "6. Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises (Fig 6.1); 13. Older Adults",
+        "table_or_recommendation": "Fig 6.1 and Section 13",
+        "doi": "10.2337/dc26-S006"
+      }
+    }
+  ]
+}
