@@ -24,6 +24,12 @@ SPLIT_FILES = {
     "test": PROCESSED_DATA_DIR / "test.csv",
 }
 
+# Phase 8 model artifacts (versioned; never patient data).
+MODELS_DIR = REPO_ROOT / "models"
+MODEL_FILE = MODELS_DIR / "logistic_regression_baseline_v1.joblib"
+MODEL_METADATA_FILE = MODELS_DIR / "baseline_model_metadata.json"
+MODEL_VERSION = "baseline-logistic-v1"
+
 # UCI download source (verified page terms, CC BY 4.0).
 DATASET_NAME = "Diabetes 130-US Hospitals for Years 1999-2008"
 DATASET_PUBLISHER = "UCI Machine Learning Repository"
